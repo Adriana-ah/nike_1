@@ -1,0 +1,171 @@
+/* Estilo global que se aplicará a todos los elementos */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+/* Estilos para la sección principal */
+section {
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    padding: 100px 100px 0;
+    background: linear-gradient(to bottom, #d509a0, #ff606e);
+}
+
+/* Estilos para el encabezado dentro de la sección */
+section header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 40px 100px;
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Estilos para el logotipo en el encabezado */
+section header .logo img {
+    max-width: 100px;
+}
+
+/* Estilos para el icono de menú en el encabezado */
+section header .toggle {
+    width: 30px;
+    height: 30px;
+    background: url(../assets/images/menu.png);
+    background-size: 30px;
+    cursor: pointer;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+/* Estilos para el contenido dentro de la sección */
+section .content {
+    position: relative;
+    width: 100%;
+    margin-top: 40px;
+    padding-bottom: 40px;
+}
+
+/* Estilos para el contenedor de la imagen */
+section .content .imgBx {
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+/* Estilos para la imagen */
+section .content .imgBx img {
+    max-width: 100%;
+    -webkit-animation: animacionZapatilla 3.3s linear infinite;
+    animation: animacionZapatilla 3.3s linear infinite;
+}
+
+/* Estilos para el bloque de texto */
+section .content .text {
+    max-width: 700px;
+    margin-top: 20px;
+}
+
+/* Estilos para el título */
+section .content .text h2 {
+    color: #fff;
+    font-size: 2.5em;
+    font-weight: 800;
+    text-transform: uppercase;
+}
+
+/* Estilos para el párrafo */
+section .content .text p {
+    color: #fff;
+}
+
+/* Estilos para el enlace "Details" */
+section .content .text a {
+    display: inline-block;
+    padding: 10px 30px;
+    color: #111;
+    background: #fff;
+    text-transform: uppercase;
+    font-weight: 500;
+    text-decoration: none;
+    letter-spacing: 2px;
+    margin-top: 15px;
+}
+
+/* Estilos para el elemento :before de la sección */
+section:before {
+    content: "ZOOMX";
+    font-size: 20vw;
+    position: absolute;
+    color: rgba(0, 0, 0, 0.0666666667);
+    display: flex;
+    font-weight: 900;
+    padding-top: 20vh;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Estilos para dispositivos móviles con una anchura máxima de 600px */
+@media (max-width: 600px) {
+
+    /* Estilos específicos para el encabezado en dispositivos móviles */
+    header {
+        padding: 20px 40px;
+    }
+
+    /* Estilos específicos para la sección en dispositivos móviles */
+    section {
+        padding: 40px 40px 0;
+        overflow: hidden;
+    }
+
+    /* Estilos específicos para el elemento :before de la sección en dispositivos móviles */
+    section:before {
+        font-size: 20vh;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    /* Estilos específicos para el contenido en dispositivos móviles */
+    .content {
+        margin-top: 120px;
+    }
+
+    /* Estilos específicos para el contenedor de la imagen en dispositivos móviles */
+    .content .imgBx {
+        margin-top: 65px;
+    }
+
+    
+}
+
+/* Animación de la zapatilla */
+@-webkit-keyframes animacionZapatilla {
+
+    0%,
+    100% {
+        transform: translateY(-20px);
+    }
+
+    50% {
+        transform: translateY(20px);
+    }
+}
+
+@keyframes animacionZapatilla {
+
+    0%,
+    100% {
+        transform: translateY(-20px);
+    }
+
+    50% {
+        transform: translateY(20px);
+    }
+}
